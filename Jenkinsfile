@@ -12,7 +12,7 @@ pipeline {
          }
         stage("docker deploy"){
             steps{
-                sh 'docker run -itd --name apache -p 9000:80 $JOB_NAME'
+                sh 'docker run -itd --name apache -p 9000:80 jenkins-docker:v1.$BUILD_ID'
             }
         }
     }
