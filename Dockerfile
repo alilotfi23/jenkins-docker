@@ -3,10 +3,10 @@ MAINTAINER ali.lotfi.linux@gmail.com
 RUN yum install -y httpd \
  zip\
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page294/namari.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page293/hostit.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip namari.zip
-RUN cp -rvf namari/* .
-RUN rm -rf namari namari.zip
+RUN unzip hostit.zip
+RUN cp -rvf hostit-html/* .
+RUN rm -rf hostit-html hostit.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
