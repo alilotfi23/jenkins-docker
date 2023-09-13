@@ -14,7 +14,7 @@ pipeline {
     stage("push Image: DOCKERHUB") {
       steps {
         withCredentials([string(credentialsId: 'docker_pass', variable: 'docker_password')]) {
-          sh "docker login -u alilotfi232311 -p ${docker_password}"
+          sh "docker login -u alilotfi -p ${docker_password}"
           sh 'docker image push alilotfi/$JOB_NAME:v1.$BUILD_ID'
           sh 'docker image push alilotfi/$JOB_NAME:latest'
           sh 'docker image rm $JOB_NAME:v1.$BUILD_ID alilotfi/$JOB_NAME:v1.$BUILD_ID alilotfi/$JOB_NAME:latest'
