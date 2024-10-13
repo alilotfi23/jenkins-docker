@@ -22,18 +22,18 @@ This project demonstrates a simple Continuous Integration and Continuous Deploym
     - Jenkins pulls the latest code from the Git repository.
 
 4. **Build Docker Image:**
-    - Jenkins builds a new Docker image using the Dockerfile present in the repository.
+    - Jenkins builds a new Docker image using the Dockerfile in the repository.
 
 5. **Push Image to Docker Registry:**
-    - The newly built Docker image is pushed to a Docker registry (e.g., Docker Hub).
+    - The newly built Docker image is pushed to a registry (e.g., Docker Hub).
 
 6. **Deploy to Development Environment:**
-    - The Docker image is then pulled from the registry and deployed to the development environment.
+    - The Docker image is pulled from the registry and deployed to the development environment.
 
 ## Prerequisites
 
 - Jenkins installed and configured.
-- Docker installed on Jenkins server and deployment server.
+- Docker installed on the Jenkins server and deployment server.
 - Access to a Git repository.
 - Docker registry account (e.g., Docker Hub).
 
